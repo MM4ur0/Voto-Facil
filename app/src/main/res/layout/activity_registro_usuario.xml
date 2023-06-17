@@ -6,111 +6,261 @@
     android:layout_height="match_parent"
     tools:context=".ActivityRegistroUsuario">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/registro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Registro" />
 
-        <TextView
-            android:id="@+id/textView37"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registro">
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:gravity="center"
-            android:text="Registro de usuario"
-            android:textSize="20sp" />
+            android:layout_height="match_parent">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="61dp" />
-
-        <TextView
-            android:id="@+id/textView38"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ingrese su cedula"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/txtcedula"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:ems="10"
-            android:hint="Cedula"
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/textView42"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ingrese sus Nombres "
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/txtnombre"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:ems="10"
-            android:hint="Nombres "
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/textView39"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ingrese sus Apellidos"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/txtapellido"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:ems="10"
-            android:hint="Apellidos"
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/textView40"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ingrese su Correo"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/txtcorreo"
-            android:layout_width="match_parent"
-            android:layout_height="71sp"
-            android:ems="10"
-            android:hint="Correo"
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/textView41"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ingrese su Contraseña"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/TextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="367dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Registrar"
-                android:text="Resgistrarse" />
-        </LinearLayout>
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
+                    android:gravity="center"
+                    android:text="Registro de usuario"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos personales"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Ingrese su cedula"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/editTextNumber2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_input"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Ingrese sus Nombres "
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/txtnombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_input"
+                    android:hint="Nombres "
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cancel"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Ingrese sus Apellidos"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/txtapellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_input"
+                    android:hint="Apellidos"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cancel"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Género"
+                    android:textSize="24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:text="Masculino"
+                            android:textSize="24dp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Femenino"
+                            android:textSize="24dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ingrese su edad"
+                        android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cancel"
+                        android:textSize="24dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Datos adicionales" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ingrese su Correo"
+                        android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/txtcorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/custom_input"
+                        android:ems="10"
+                        android:hint="Correo"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cancel"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ingrese su Contraseña"
+                        android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/TextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/custom_input"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cancel"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Repetir contraseña"
+                        android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/editTextText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/custom_input"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="24dp" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="367dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/blue"
+                        android:onClick="Registrar"
+                        android:text="Resgistrarse" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

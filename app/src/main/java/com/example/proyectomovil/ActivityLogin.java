@@ -15,7 +15,13 @@ public class ActivityLogin extends AppCompatActivity {
     }
 
     public void btnIniciarSesionOnClick(View v){
-        //Intent call_Inicio = new Intent(this, ActivityLogin);
+        Intent call_Inicio = new Intent(this, ActivityInicio.class);
+        startActivity(call_Inicio);
+    }
+
+    public void btnRegistrar(View v){
+        Intent call_registrar = new Intent(this, ActivityRegistroUsuario.class);
+        startActivity(call_registrar);
     }
 
 

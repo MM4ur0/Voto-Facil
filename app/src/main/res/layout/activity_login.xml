@@ -100,16 +100,18 @@
                     android:layout_marginBottom="50dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/blue"
+                    android:onClick="btnIniciarSesionOnClick"
                     android:text="Iniciar Sesión"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/crearCuenta"
+                    android:id="@+id/btnRegistrar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
                     android:gravity="center"
+                    android:onClick="btnRegistrar"
                     android:text="¿Nuevo?, registrate aquí"
                     android:textColor="@color/white"
                     android:textStyle="italic" />

@@ -18,7 +18,6 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_usuario);
-        txtcedula=(EditText)findViewById(R.id.txtcedula);
         txtnombre=(EditText)findViewById(R.id.txtnombre);
         txtapellido=(EditText)findViewById(R.id.txtapellido);
         txtcorreo=(EditText)findViewById(R.id.txtcorreo);
