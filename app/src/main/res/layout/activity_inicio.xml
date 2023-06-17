@@ -64,7 +64,6 @@
                         android:layout_height="100dp"
                         android:layout_marginRight="15dp"
                         android:layout_weight="1"
-                        android:background="@color/bad"
                         app:srcCompat="@drawable/ic_person" />
 
                     <LinearLayout
@@ -119,7 +118,7 @@
                         android:layout_height="100dp"
                         android:layout_marginRight="15dp"
                         android:layout_weight="1"
-                        android:background="@color/bad"
+
                         app:srcCompat="@drawable/ic_partidosp" />
 
                     <LinearLayout
@@ -166,7 +165,6 @@
                         android:layout_height="100dp"
                         android:layout_marginRight="15dp"
                         android:layout_weight="1"
-                        android:background="@color/bad"
                         app:srcCompat="@drawable/ic_vote" />
 
                     <LinearLayout
@@ -212,7 +210,6 @@
                         android:layout_height="100dp"
                         android:layout_marginRight="15dp"
                         android:layout_weight="1"
-                        android:background="@color/bad"
                         app:srcCompat="@drawable/ic_bar" />
 
                     <LinearLayout
