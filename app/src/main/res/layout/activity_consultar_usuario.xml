@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityConsultarUsuario">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Consulta de usuario"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/l_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Identificación"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtIdentificacion"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Buscar por cedula"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/blue"
+                    android:onClick="btnIdentificadorOnClick"
+                    android:text="Buscar" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtCNombre"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_margin="15dp"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtCApellido"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_margin="15dp"
+                android:ems="10"
+                android:hint="Apellido"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtCCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_margin="15dp"
+                android:ems="10"
+                android:hint="Correo"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtCCedula"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_margin="15dp"
+                android:ems="10"
+                android:hint="Cédula"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtCContrasenia"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_margin="15dp"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/good"
+                    android:onClick="btnActualizarOnClick"
+                    android:text="Actualizar" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/bad"
+                    android:onClick="btnEliminarOnClick"
+                    android:text="Eliminar" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityLogin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:gravity="center"
+                android:text="Voto Facil"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="Votar nunca fue más facil"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="@string/cedulainput"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/txtCedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_cedula"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint=" 0912345678"
+                    android:inputType="number"
+                    android:outlineSpotShadowColor="@color/blue"
+                    android:paddingStart="12dp"
+                    android:shadowColor="@color/information"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="@string/passwordinput"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="15dp"
+                    android:hint="AB12356OPK#"
+                    android:inputType="textPassword"
+                    android:paddingStart="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/blue"
+                    android:text="Iniciar Sesión"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/crearCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:gravity="center"
+                    android:text="¿Nuevo?, registrate aquí"
+                    android:textColor="@color/white"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
