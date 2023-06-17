@@ -25,11 +25,6 @@
             android:name=".ActivityRegistroUsuario"
             android:exported="false" />
         <activity
-            android:name=".ActivityRegistro"
-            android:exported="false"
-            android:label="@string/title_activity_registro"
-            android:theme="@style/Theme.ProyectoMovil.NoActionBar" />
-        <activity
             android:name=".ActivityLogin"
             android:exported="false"
             android:screenOrientation="portrait" />

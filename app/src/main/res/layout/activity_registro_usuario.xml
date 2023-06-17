@@ -39,7 +39,6 @@
                 android:paddingTop="15dp">
 
                 <TextView
-                    android:id="@+id/textView37"
                     android:layout_width="match_parent"
                     android:layout_height="69dp"
                     android:gravity="center"
@@ -48,14 +47,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView35"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Datos personales"
                     android:textSize="16dp" />
 
                 <TextView
-                    android:id="@+id/textView38"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -74,7 +71,6 @@
                     android:textSize="24dp" />
 
                 <TextView
-                    android:id="@+id/textView42"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -95,7 +91,6 @@
                     android:textSize="24dp" />
 
                 <TextView
-                    android:id="@+id/textView39"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -116,7 +111,6 @@
                     android:textSize="24dp" />
 
                 <TextView
-                    android:id="@+id/textView36"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Género"
@@ -157,7 +151,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView43"
                         android:layout_width="350dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -165,7 +158,6 @@
                         android:textSize="24dp" />
 
                     <EditText
-                        android:id="@+id/txtREdad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -178,7 +170,6 @@
                         android:textSize="24dp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -194,13 +185,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView44"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Datos adicionales" />
 
                     <TextView
-                        android:id="@+id/textView40"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ingrese su Correo"
@@ -221,7 +210,6 @@
                         android:textSize="24dp" />
 
                     <TextView
-                        android:id="@+id/textView41"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ingrese su Contraseña"
@@ -251,14 +239,12 @@
                         android:textSize="24dp" />
 
                     <TextView
-                        android:id="@+id/textView45"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Repetir contraseña"
                         android:textSize="24dp" />
 
                     <Button
-                        android:id="@+id/button4"
                         android:layout_width="367dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/blue"

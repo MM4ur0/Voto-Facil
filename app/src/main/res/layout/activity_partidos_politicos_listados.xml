@@ -39,7 +39,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Selecciona la posición"
@@ -98,7 +97,6 @@
                             android:paddingBottom="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 app:srcCompat="@drawable/madera_guerrero" />
@@ -127,7 +125,6 @@
                             android:paddingBottom="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 app:srcCompat="@drawable/suma" />
@@ -156,7 +153,6 @@
                             android:paddingBottom="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 app:srcCompat="@drawable/avanza" />
@@ -185,7 +181,6 @@
                             android:paddingBottom="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView7"
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
                                 app:srcCompat="@drawable/psc" />
@@ -214,7 +209,6 @@
                             android:paddingBottom="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView8"
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
                                 app:srcCompat="@drawable/pachakutik" />
@@ -243,7 +237,6 @@
                             android:paddingBottom="5dp">
 
                             <ImageView
-                                android:id="@+id/imageView9"
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
                                 app:srcCompat="@drawable/psp" />
