@@ -48,15 +48,18 @@
                 android:orientation="horizontal">
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/spnRegion"
                     android:layout_width="293dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:textSize="50dp" />
 
                 <ImageButton
                     android:id="@+id/imageButton"
                     android:layout_width="140dp"
                     android:layout_height="65dp"
+                    android:layout_marginRight="50dp"
                     android:layout_weight="1"
                     app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
             </LinearLayout>

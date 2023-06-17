@@ -21,7 +21,7 @@ public class ActivityInicio extends AppCompatActivity {
         partidopolitico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent call_partidos = new Intent(ActivityInicio.this, ActivityPartidoPoliticoMain.class);
+                Intent call_partidos = new Intent(ActivityInicio.this, ActivityPartidosPoliticosListados.class);
                 startActivity(call_partidos);
             }
         });

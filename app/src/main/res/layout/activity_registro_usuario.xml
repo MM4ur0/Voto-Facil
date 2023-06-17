@@ -63,7 +63,7 @@
                     android:textSize="24dp" />
 
                 <EditText
-                    android:id="@+id/editTextNumber2"
+                    android:id="@+id/txtRCedula"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -82,7 +82,7 @@
                     android:textSize="24dp" />
 
                 <EditText
-                    android:id="@+id/txtnombre"
+                    android:id="@+id/txtRnombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -103,7 +103,7 @@
                     android:textSize="24dp" />
 
                 <EditText
-                    android:id="@+id/txtapellido"
+                    android:id="@+id/txtRAplleidos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -133,7 +133,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/radioButton"
+                            android:id="@+id/rdbMasculino"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="25dp"
@@ -141,7 +141,7 @@
                             android:textSize="24dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton2"
+                            android:id="@+id/rdbFemenino"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Femenino"
@@ -165,7 +165,7 @@
                         android:textSize="24dp" />
 
                     <EditText
-                        android:id="@+id/editTextNumber"
+                        android:id="@+id/txtREdad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -176,6 +176,14 @@
                         android:textColor="@color/black"
                         android:textColorHint="@color/cancel"
                         android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPassword" />
 
                 </LinearLayout>
 
@@ -199,7 +207,7 @@
                         android:textSize="24dp" />
 
                     <EditText
-                        android:id="@+id/txtcorreo"
+                        android:id="@+id/txtRCorreo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="15dp"
@@ -220,7 +228,7 @@
                         android:textSize="24dp" />
 
                     <EditText
-                        android:id="@+id/TextPassword"
+                        android:id="@+id/txtRPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="15dp"
@@ -232,23 +240,21 @@
                         android:textColorHint="@color/cancel"
                         android:textSize="24dp" />
 
+                    <EditText
+                        android:id="@+id/txtRRPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_input"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:padding="5dp"
+                        android:textSize="24dp" />
+
                     <TextView
                         android:id="@+id/textView45"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Repetir contraseña"
-                        android:textSize="24dp" />
-
-                    <EditText
-                        android:id="@+id/editTextText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/custom_input"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
                         android:textSize="24dp" />
 
                     <Button
