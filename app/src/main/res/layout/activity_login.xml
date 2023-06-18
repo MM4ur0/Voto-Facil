@@ -48,6 +48,7 @@
                     android:textSize="24sp" />
 
                 <EditText
+                    android:id="@+id/txtcedula"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginLeft="5dp"
@@ -73,6 +74,7 @@
                     android:textSize="24sp" />
 
                 <EditText
+                    android:id="@+id/txtpassword"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginLeft="5dp"
@@ -88,6 +90,7 @@
                     android:textSize="24sp" />
 
                 <Button
+                    android:id="@+id/btnlogin"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginBottom="50dp"
@@ -99,6 +102,7 @@
                     android:textSize="24sp" />
 
                 <Button
+                    android:id="@+id/btnsign"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"

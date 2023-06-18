@@ -11,7 +11,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_partido = "CREATE TABLE partidopolitico(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, imagen TEXT, presidente TEXT, fundacion TEXT, posicion TEXT, sede TEXT, pais TEXT);";
     private static final String TABLE_candidato = "CREATE TABLE candidato(id INTEGER PRIMARY KEY AUTOINCREMENT, imagen TEXT, nombre TEXT, cargo TEXT, partidoAfiliado TEXT);";
 
-
     private static final String TABLE_PAPELETA = "CREATE TABLE Papeleta (id_papeleta INTEGER PRIMARY KEY AUTOINCREMENT, nombre_papeleta TEXT);";
 
     private static final String TABLE_VOTO = "CREATE TABLE Voto (" +
@@ -44,8 +43,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(TABLE_PAPELETA);
         db.execSQL(TABLE_VOTO);
 
-        String insertUsuario = "INSERT INTO usuarios(cedula, nombres, apellidos, genero, edad, correo, contrasena) VALUES('0931760900', 'Mauro Fabrizio', 'Ramos Mesías', 'Masculino', '24', 'framosmesias@gmail.com', '12345')";
-        db.execSQL(insertUsuario);
+        String insertUsuarios = "INSERT INTO usuarios(cedula, nombres, apellidos, genero, edad, correo, contrasena) VALUES " +
+                "('0931760900', 'Mauro Fabrizio', 'Ramos Mesías', 'Masculino', '24', 'framosmesias@gmail.com', '12345'), " +
+                "('0912345678', 'Jesus', 'Acsota', 'Masculino', '25', 'j@gmail.com', 'j123'), " +
+                "('0931760902', 'María', 'López', 'Femenino', '28', 'marialopez@gmail.com', 'qwerty')";
+
+        db.execSQL(insertUsuarios);
+
 
         String insertPartido = "INSERT INTO partidopolitico(nombre, imagen, presidente, fundacion, posicion, sede, pais) VALUES('Partido X', 'imagen_partido.jpg', 'Juan Pérez', '01/01/2000', 'Centro', 'Ciudad A', 'País X');";
         db.execSQL(insertPartido);

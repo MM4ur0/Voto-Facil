@@ -4,33 +4,95 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.proyectomovil.model.Usuario;
 
 public class ActivityLogin extends AppCompatActivity {
 
+
+    Usuario usuario;
+    EditText txtcedula;
+    EditText txtpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        txtcedula = (EditText) findViewById(R.id.txtcedula);
+        txtpassword=(EditText) findViewById(R.id.txtpassword);
     }
 
     public void btnIniciarSesionOnClick(View v){
-        Intent call_Inicio = new Intent(this, ActivityInicio.class);
-        DatabaseHelper dbHelper = new DatabaseHelper(this);
-        final SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put("cedula", "0931760904");
-        cv.put("nombres", "Mauro");
-        cv.put("apellidos", "Ramos");
-        cv.put("edad", "24");
-        cv.put("correo", "fbrz@gmail.com");
-        cv.put("password", "12345");
-        db.insert("usuarios", null, cv);
+        this.getUser();
+       /* if(usuario.getCedula().equals(txtcedula.getText().toString()) && usuario.getContrasena().equals(txtpassword.getText().toString())){
+            Intent call_registrar = new Intent(this, ActivityInicio.class);
+            startActivity(call_registrar);
+        }else{
+            Toast.makeText(this, "No se encuentra usuario registrado registrado", Toast.LENGTH_SHORT).show();
+        }if(usuario.getCedula().equals(txtcedula.getText().toString()) || usuario.getContrasena().equals(txtpassword.getText().toString())){
+            Toast.makeText(this, "Cedula o Contraseña es incorrecta", Toast.LENGTH_SHORT).show();
+        }
 
-        startActivity(call_Inicio);
+**/
+        Log.d("TAG", usuario.toString());
+
+
     }
+
+
+    public void getUser() {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        final SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Intent call_Inicio = new Intent(this, ActivityInicio.class);
+
+        if (db != null) {
+            String valor = txtcedula.getText().toString();
+            String vclave = txtpassword.getText().toString();
+            Cursor c = null;
+            usuario = new Usuario();
+
+            try {
+                c = db.rawQuery("SELECT id, cedula, nombres, apellidos, genero, edad, correo, contrasena FROM usuarios WHERE cedula = ? AND contrasena = ?", new String[]{valor, vclave});
+
+                if (c != null && c.moveToFirst()) {
+                    usuario.setId(c.getInt(0));
+                    usuario.setCedula(c.getString(1));
+                    usuario.setNombres(c.getString(2));
+                    usuario.setApellidos(c.getString(3));
+                    usuario.setGenero(c.getString(4));
+                    usuario.setEdad(c.getString(5));
+                    usuario.setCorreo(c.getString(6));
+                    usuario.setContrasena(c.getString(7));
+
+                    startActivity(call_Inicio);
+                } else {
+                    Toast.makeText(this, "No se encuentra registrado", Toast.LENGTH_SHORT).show();
+                }
+            } catch (SQLiteException e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Error al consultar la base de datos", Toast.LENGTH_SHORT).show();
+            } finally {
+                if (c != null) {
+                    c.close();
+                }
+                // db.close(); // Cerrar la base de datos si es necesario
+            }
+        } else {
+            Toast.makeText(this, "No se pudo acceder a la base de datos", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+
+
 
     public void btnRegistrar(View v){
         Intent call_registrar = new Intent(this, ActivityRegistroUsuario.class);
