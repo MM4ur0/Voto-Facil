@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ProyectoMovil"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityPlan"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPoliticos"
+            android:exported="false" />
+        <activity
             android:name=".ActivityVotocionMain"
             android:exported="false" />
         <activity

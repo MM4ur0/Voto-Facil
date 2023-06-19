@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:color">#fff</item>
         <item name="android:textSize">26dp</item> <!-- Tamaño del texto -->
     </style>
 

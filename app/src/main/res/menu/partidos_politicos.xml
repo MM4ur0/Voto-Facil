@@ -2,15 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/informacion"
-        android:title="Info. Partido"
-        android:icon="@drawable/ic_badge"/>
-    <item
         android:id="@+id/candidatos"
         android:title="Candidatos"
-        android:icon="@drawable/ic_groups"/>
+        />
     <item
         android:id="@+id/plan"
         android:title="Plan de trabajo"
-        android:icon="@drawable/ic_description"/>
+        />
 </menu>
