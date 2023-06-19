@@ -16,8 +16,6 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
 
     private String seleccion = "";
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
