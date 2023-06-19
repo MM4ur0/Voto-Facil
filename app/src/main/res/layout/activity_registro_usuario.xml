@@ -228,6 +228,12 @@
                         android:textColorHint="@color/cancel"
                         android:textSize="24dp" />
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Repetir contraseña"
+                        android:textSize="24dp" />
+
                     <EditText
                         android:id="@+id/txtRRPassword"
                         android:layout_width="match_parent"
@@ -236,12 +242,6 @@
                         android:ems="10"
                         android:inputType="textPassword"
                         android:padding="5dp"
-                        android:textSize="24dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Repetir contraseña"
                         android:textSize="24dp" />
 
                     <Button

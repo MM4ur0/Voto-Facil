@@ -21,8 +21,8 @@ public class ActivityConsultarUsuario extends AppCompatActivity {
 
     @SuppressLint("Range")
     public void btnIdentificadorOnClick(View v) {
-        DatabaseHelper dbHelper = new DatabaseHelper(this);
-        final SQLiteDatabase db = dbHelper.getReadableDatabase();
+        //DatabaseHelper dbHelper = new DatabaseHelper(this);
+       /* final SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         if (db != null) {
             EditText txtIdentificador = findViewById(R.id.txtIdentificacion);
@@ -141,8 +141,8 @@ public class ActivityConsultarUsuario extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No se pudo acceder a la base de datos", Toast.LENGTH_SHORT).show();
         }
-    }
+    *
 
-
+*/
 
 }
