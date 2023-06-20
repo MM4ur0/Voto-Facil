@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/blue"
         app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white"
         app:titleTextAppearance="@style/Toolbar.TitleText"
         app:title="Partido Político"
         />
@@ -35,7 +36,7 @@
 
         <ImageView
             android:id="@+id/infoImg"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="200dp"
             tools:srcCompat="@tools:sample/avatars" />
 

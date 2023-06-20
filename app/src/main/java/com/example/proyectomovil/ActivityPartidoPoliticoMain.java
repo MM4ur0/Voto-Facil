@@ -11,15 +11,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
-import org.w3c.dom.Text;
 
 public class ActivityPartidoPoliticoMain extends AppCompatActivity {
 
@@ -38,9 +34,7 @@ public class ActivityPartidoPoliticoMain extends AppCompatActivity {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         final SQLiteDatabase db = dbHelper.getReadableDatabase();
         if(db != null){
-
             TextView titulo = (TextView) findViewById(R.id.infoTitulo);
-
             ImageView img = (ImageView) findViewById(R.id.infoImg);
             TextView ano = (TextView) findViewById(R.id.infoAno);
             TextView sede = (TextView) findViewById(R.id.infoSede);
@@ -56,7 +50,6 @@ public class ActivityPartidoPoliticoMain extends AppCompatActivity {
                 int drawableId = getResources().getIdentifier(imgPartido, "drawable", getPackageName());
                 Drawable drawable = getResources().getDrawable(drawableId);
                 img.setImageDrawable(drawable);
-
                 ano.setText(c.getString(c.getColumnIndex("fundacion")));
                 sede.setText(c.getString(c.getColumnIndex("sede")));
                 pais.setText(c.getString(c.getColumnIndex("pais")));
@@ -76,7 +69,6 @@ public class ActivityPartidoPoliticoMain extends AppCompatActivity {
                 if(c.moveToPosition(2)){
                     idea3.setText(c.getString(c.getColumnIndex("idea")));
                 }
-
             }
             c.close();
         }

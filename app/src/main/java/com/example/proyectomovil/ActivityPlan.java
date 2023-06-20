@@ -32,7 +32,7 @@ public class ActivityPlan extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://www.google.com/";
+                String url = "https://candidatos2023.cne.gob.ec/filtrarDignidades";
 
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);

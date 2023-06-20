@@ -16,7 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Lista de candidatos"
-        app:titleTextAppearance="@style/Toolbar.TitleText" />
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
