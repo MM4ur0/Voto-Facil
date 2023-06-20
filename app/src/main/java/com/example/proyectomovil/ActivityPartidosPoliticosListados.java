@@ -88,7 +88,7 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent call_pp = new Intent(ActivityPartidosPoliticosListados.this, ActivityPartidoPoliticoMain.class);
-                call_pp.putExtra("partido", "Madera");
+                call_pp.putExtra("partido", "1");
                 startActivity(call_pp);
             }
         });
@@ -97,7 +97,7 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent call_pp = new Intent(ActivityPartidosPoliticosListados.this, ActivityPartidoPoliticoMain.class);
-                call_pp.putExtra("partido", "Suma");
+                call_pp.putExtra("partido", "2");
                 startActivity(call_pp);
             }
         });
@@ -106,7 +106,7 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent call_pp = new Intent(ActivityPartidosPoliticosListados.this, ActivityPartidoPoliticoMain.class);
-                call_pp.putExtra("partido", "Avanza");
+                call_pp.putExtra("partido", "3");
                 startActivity(call_pp);
             }
         });
@@ -115,7 +115,7 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent call_pp = new Intent(ActivityPartidosPoliticosListados.this, ActivityPartidoPoliticoMain.class);
-                call_pp.putExtra("partido", "Cristiano");
+                call_pp.putExtra("partido", "4");
                 startActivity(call_pp);
             }
         });
@@ -124,7 +124,7 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent call_pp = new Intent(ActivityPartidosPoliticosListados.this, ActivityPartidoPoliticoMain.class);
-                call_pp.putExtra("partido", "Pacha");
+                call_pp.putExtra("partido", "5");
                 startActivity(call_pp);
             }
         });
@@ -133,7 +133,7 @@ public class ActivityPartidosPoliticosListados extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent call_pp = new Intent(ActivityPartidosPoliticosListados.this, ActivityPartidoPoliticoMain.class);
-                call_pp.putExtra("partido", "Psp");
+                call_pp.putExtra("partido", "6");
                 startActivity(call_pp);
             }
         });

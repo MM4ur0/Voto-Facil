@@ -9,7 +9,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TABLE_USUARIO = "CREATE TABLE usuarios(id INTEGER PRIMARY KEY AUTOINCREMENT, cedula TEXT, nombres TEXT, apellidos TEXT, genero TEXT, edad TEXT, correo TEXT, contrasena TEXT);";
     private static final String TABLE_PARTIDO = "CREATE TABLE partidopolitico(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, imagen TEXT, fundacion TEXT, posicion TEXT, sede TEXT, pais TEXT);";
-    private static final String TABLE_CANDIDATO = "CREATE TABLE candidato(id INTEGER PRIMARY KEY AUTOINCREMENT, imagen TEXT, nombre TEXT, cargo TEXT, idPartidoAfiliado TEXT);";
+    private static final String TABLE_IDEOLOGIA = "CREATE TABLE ideologia(id INTEGER PRIMARY KEY AUTOINCREMENT, idea TEXT, idpartido TEXT);";
+    private static final String TABLE_CANDIDATO = "CREATE TABLE candidato(id INTEGER PRIMARY KEY AUTOINCREMENT, imagen TEXT, nombre TEXT, cargo TEXT, idpartido TEXT);";
 
     private static final String TABLE_PAPELETA = "CREATE TABLE Papeleta (id_papeleta INTEGER PRIMARY KEY AUTOINCREMENT, nombre_papeleta TEXT);";
 
@@ -32,6 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_USUARIO);
         db.execSQL(TABLE_PARTIDO);
+        db.execSQL(TABLE_IDEOLOGIA);
         db.execSQL(TABLE_CANDIDATO);
         db.execSQL(TABLE_PAPELETA);
         db.execSQL(TABLE_VOTO);
@@ -44,27 +46,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(insertUsuarios);
 
         String insertPartido = "INSERT INTO partidopolitico(nombre, imagen, fundacion, posicion, sede, pais) VALUES" +
-                "('Movimiento Madera de Guerrero', 'madera_guerrero.png', '5 de Abril de 2009', 'Derecha', 'Guayaquil', 'Ecuador' )," +
-                "('Sociedad Unida Más Acción', 'suma.png', '15 de Mayo de 2012', 'Derecha', 'Quito', 'Ecuador')," +
-                "('Partido Avanza', 'avanza.png', '8 de Marzo de 2012', 'Derecha', 'Quito', 'Ecuador')," +
-                "('Partido Social Cristiano', 'psc.png', '13 de Noviembre de 1951', 'Centro', 'Quito', 'Ecuador' )," +
-                "('Movimiento de Unidad Plurinacional', 'pachakutik.png', '1 de Noviembre de 1995', 'Izquierda','Quito', 'Ecuador')," +
-                "('Partido Sociedad Patriótica', 'psp.png', '4 de Marzo de 2002', 'Centro', 'Quito', 'Ecuador')";
+                "('Movimiento Madera de Guerrero', 'madera_guerrero', '5 de Abril de 2009', 'Derecha', 'Guayaquil', 'Ecuador' )," +
+                "('Sociedad Unida Más Acción', 'suma', '15 de Mayo de 2012', 'Derecha', 'Quito', 'Ecuador')," +
+                "('Partido Avanza', 'avanza', '8 de Marzo de 2012', 'Derecha', 'Quito', 'Ecuador')," +
+                "('Partido Social Cristiano', 'psc', '13 de Noviembre de 1951', 'Centro', 'Quito', 'Ecuador' )," +
+                "('Movimiento de Unidad Plurinacional', 'pachakutik', '1 de Noviembre de 1995', 'Izquierda','Quito', 'Ecuador')," +
+                "('Partido Sociedad Patriótica', 'psp', '4 de Marzo de 2002', 'Centro', 'Quito', 'Ecuador')";
         db.execSQL(insertPartido);
 
-        String insertCandidato = "INSERT INTO candidato(imagen, nombre, cargo, idPartidoAfiliado) VALUES" +
-                "('imagen_candidato.jpg', 'Jaime Nebot', 'Presidente', '1')," +
-                "('imagen', 'Cinthya Vitery', 'Vise Presidente', '1')," +
-                "('imagen', 'Guillermo Celi', 'Preseidente', '2')," +
-                "('imagen', 'Mauricio Rodas', 'Vice Presidente', '2')," +
-                "('imagen', 'Javier Orti', 'Presidente', '3')," +
-                "('imagen', 'Ramiro Gonzalez', 'Vice Presidente', '3')," +
-                "('imagen', 'Alfredo Serrano', 'Presidente', '4')," +
-                "('imagen', 'Juan Jose Yunez', 'Vise Presidente', '4')," +
-                "('imagen', 'Marlon Santi', 'Presidente', '5')," +
-                "('imagen', 'Cecilia Velasque', 'Vice Presidente', '5')," +
-                "('imagen', 'Lucio Guttierez', 'Presidente', '6')," +
-                "('imagen', 'Ibeth Suasnavas Gutierrez', 'Vice Precidente', '6')";
+        String insertarIdeologia = "INSERT INTO ideologia(idea, idpartido) VALUES" +
+                "('Atrapalo todo','2'), ('Liberalismo económico', '2'), ('Democracia Liberal', '2')," +
+                "('Socila Democracia', '3'), ('SocioLiberalismo', '3'), ('Atrapalo todo', '3')," +
+                "('Neoliberalismo', '4'), ('Democracia Cristiana', '4'), ('Conservadurismo social', '4')," +
+                "('Indigenismo', '5'), ('Ecologísmo Radical', '5'), ('Plurinacionalismo', '5')," +
+                "('Populismo', '6'), ('Personalismo', '6'), ('Atrapalo todo', '6');";
+        db.execSQL(insertarIdeologia);
+
+
+        String insertCandidato = "INSERT INTO candidato(imagen, nombre, cargo, idPartido) VALUES" +
+                "('nebot', 'Jaime Nebot', 'Presidente', '1')," +
+                "('cintya', 'Cinthya Vitery', 'Vise Presidente', '1')," +
+                "('celi', 'Guillermo Celi', 'Preseidente', '2')," +
+                "('rodas', 'Mauricio Rodas', 'Vice Presidente', '2')," +
+                "('orti', 'Javier Orti', 'Presidente', '3')," +
+                "('ramiro', 'Ramiro Gonzalez', 'Vice Presidente', '3')," +
+                "('alfredo', 'Alfredo Serrano', 'Presidente', '4')," +
+                "('juan', 'Juan Jose Yunez', 'Vise Presidente', '4')," +
+                "('santi', 'Marlon Santi', 'Presidente', '5')," +
+                "('cecilia', 'Cecilia Velasque', 'Vice Presidente', '5')," +
+                "('lucio', 'Lucio Guttierez', 'Presidente', '6')," +
+                "('ibeth', 'Ibeth Suasnavas Gutierrez', 'Vice Precidente', '6')";
         db.execSQL(insertCandidato);
 
         String insertPapeleta = "INSERT INTO Papeleta (nombre_papeleta) VALUES ('Papeleta Presidencial')";
