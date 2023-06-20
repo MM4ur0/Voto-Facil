@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityComentarios">
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/Comentarios"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    app:layout_constraintTop_toTopOf="parent"
+    app:titleTextAppearance="@style/Toolbar.TitleText"
+    app:title="Comentarios"
+    />
+
+    <LinearLayout
+        android:id="@+id/escribir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/Comentarios"
+        app:layout_constraintTop_toBottomOf="@+id/Comentarios">
+
+        <EditText
+            android:id="@+id/txtMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Dejanos un comentario"
+            android:inputType="textMultiLine"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/blue"
+            android:onClick="btnComentarOnClick"
+            android:text="Enviar comentario"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintStart_toStartOf="@+id/Comentarios"
+        app:layout_constraintTop_toBottomOf="@+id/escribir"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/cCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/cUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fabrizio Ramos"
+                            android:textColor="@color/blue"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cRealizado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Estan buenas las ideas expuestas en el plan!."
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jesus Acosta"
+                            android:textColor="@color/blue"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Estan buenas las ideas expuestas en el plan!."
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Emily Gonzalez"
+                            android:textColor="@color/blue"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Este plan político promete impulsar el crecimiento económico y generar empleo, pero requerirá una implementación cuidados."
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jorge Charco"
+                            android:textColor="@color/blue"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="El enfoque de este político en la educación es alentador, sin embargo, es fundamental asegurar que se destinen los recursos adecuados."
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Manuel Montalvan"
+                            android:textColor="@color/blue"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="La promesa de este político de fortalecer la seguridad ciudadana es importante, pero será vital equilibrar las medidas de aplicación de la ley."
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
