@@ -55,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(insertPartido);
 
         String insertarIdeologia = "INSERT INTO ideologia(idea, idpartido) VALUES" +
+                "('Autonomismo', '1'), ('Liberalismo', '1'), ('Conservadurismo', '1')," +
                 "('Atrapalo todo','2'), ('Liberalismo económico', '2'), ('Democracia Liberal', '2')," +
                 "('Socila Democracia', '3'), ('SocioLiberalismo', '3'), ('Atrapalo todo', '3')," +
                 "('Neoliberalismo', '4'), ('Democracia Cristiana', '4'), ('Conservadurismo social', '4')," +

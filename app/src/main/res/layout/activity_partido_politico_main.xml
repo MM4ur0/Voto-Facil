@@ -177,37 +177,49 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/idea1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
+                            android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_background"
                             android:gravity="center"
-                            android:padding="3dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="5dp"
                             android:text="Autonomismo"
                             android:textColor="@color/cancel"
                             android:textSize="10dp" />
 
                         <TextView
+                            android:id="@+id/idea2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
+                            android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_background"
                             android:gravity="center"
-                            android:padding="3dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="5dp"
                             android:text="Conservadurismo social"
                             android:textColor="@color/cancel"
                             android:textSize="10dp" />
 
                         <TextView
+                            android:id="@+id/idea3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
+                            android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_background"
                             android:gravity="center"
-                            android:padding="3dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="5dp"
                             android:text="Humanismo cristiano"
                             android:textColor="@color/cancel"
                             android:textSize="10dp" />

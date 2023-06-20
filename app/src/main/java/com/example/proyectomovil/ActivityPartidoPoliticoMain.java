@@ -62,6 +62,22 @@ public class ActivityPartidoPoliticoMain extends AppCompatActivity {
                 pais.setText(c.getString(c.getColumnIndex("pais")));
                 posicion.setText(c.getString(c.getColumnIndex("posicion")));
             }
+
+            TextView idea1 = (TextView) findViewById(R.id.idea1);
+            TextView idea2 = (TextView) findViewById(R.id.idea2);
+            TextView idea3 = (TextView) findViewById(R.id.idea3);
+            c = db.rawQuery("SELECT idea FROM ideologia WHERE idpartido="+identificador, null);
+            if(c!=null){
+                c.moveToFirst();
+                idea1.setText(c.getString(c.getColumnIndex("idea")));
+                if(c.moveToPosition(1)){
+                    idea2.setText(c.getString(c.getColumnIndex("idea")));
+                }
+                if(c.moveToPosition(2)){
+                    idea3.setText(c.getString(c.getColumnIndex("idea")));
+                }
+
+            }
             c.close();
         }
     }
