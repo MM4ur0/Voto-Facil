@@ -137,11 +137,12 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp"
+                android:id="@+id/iVotacion"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp">
+                android:layout_marginBottom="15dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"

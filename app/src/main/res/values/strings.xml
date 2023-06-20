@@ -4,7 +4,7 @@
     <!-- Title Toolbar -->
     <string name="partidos_politicos">Partidos Políticos</string>
     <string name="votacionmain">Ejercer Voto</string>
-
+    <string name="fagg">FAQ</string>
     <!-- Login text -->
     <string name="cedulainput">Ingrese su Número de cedula</string>
     <string name="passwordinput">Ingrese su Contraseña</string>
@@ -21,5 +21,18 @@
     - Personas con discapacidad
     </string>
 
+    <string name="faq1">
+    El artículo 14 del Código de la Democracia establece que se suspenderán estos derechos cuando exista:\n
+    Interdicción judicial, mientras ésta subsista, salvo en caso de insolvencia o quiebra que no haya sido declarada fraudulenta.\n
+    Sentencia ejecutoriada que sancione con pena privativa de libertad, mientras esta subsista; y\n
+    Cuando el Tribunal Contencioso Electoral haya declarado en sentencia ejecutoriada la responsabilidad por\n el cometimiento de alguna infracción de las tipificadas en esta ley con esa sanción.
+    </string>
+
+    <string name="faq2">
+     Cargos a elegir son en este momento 2 :\n
+            -Presidente\n
+            -Vicepresidente\n
+     Los cuales se encuentran en la papeleta virtual
+    </string>
 
 </resources>

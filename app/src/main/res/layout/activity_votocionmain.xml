@@ -7,17 +7,17 @@
     tools:context=".ActivityVotocionMain">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
+        android:id="@+id/votomain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title= "@string/votacionmain"
-        app:titleTextColor="@color/white"
-        app:titleTextAppearance="@style/Toolbar.TitleText"/>
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/votacionmain"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
 
     <LinearLayout
         android:layout_width="401dp"
@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+        app:layout_constraintTop_toBottomOf="@+id/votomain">
 
         <TextView
             android:id="@+id/textView"
@@ -107,25 +107,15 @@
             android:paddingTop="15dp">
 
             <Button
-                android:id="@+id/button"
-                android:layout_width="182dp"
-                android:layout_height="43dp"
+                android:id="@+id/initVoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/blue"
                 android:gravity="center"
-                android:text="Verificar" />
+                android:text="Iniciar Proceso de Votación" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FAQ"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="635dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
