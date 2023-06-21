@@ -10,10 +10,13 @@ public class Usuario {
     private String correo;
     private String contrasena;
 
+    private int votacion;
+
     public Usuario() {
     }
 
-    public Usuario(String cedula, String nombres, String apellidos, String genero, String edad, String correo, String contrasena) {
+    public Usuario(int id, String cedula, String nombres, String apellidos, String genero, String edad, String correo, String contrasena, int votacion) {
+        this.id = id;
         this.cedula = cedula;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -21,9 +24,19 @@ public class Usuario {
         this.edad = edad;
         this.correo = correo;
         this.contrasena = contrasena;
+        this.votacion = votacion;
     }
 
     // Getters y Setters
+
+
+    public int getVotacion() {
+        return votacion;
+    }
+
+    public void setVotacion(int votacion) {
+        this.votacion = votacion;
+    }
 
     public int getId() {
         return id;

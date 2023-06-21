@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteStatement;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String TABLE_USUARIO = "CREATE TABLE usuarios(id INTEGER PRIMARY KEY AUTOINCREMENT, cedula TEXT, nombres TEXT, apellidos TEXT, genero TEXT, edad TEXT, correo TEXT, contrasena TEXT);";
+    private static final String TABLE_USUARIO = "CREATE TABLE usuarios(id INTEGER PRIMARY KEY AUTOINCREMENT, cedula TEXT, nombres TEXT, apellidos TEXT, genero TEXT, edad TEXT, correo TEXT, contrasena TEXT, votacion INTEGER);";
     private static final String TABLE_PARTIDO = "CREATE TABLE partidopolitico(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, imagen TEXT, fundacion TEXT, posicion TEXT, sede TEXT, pais TEXT);";
     private static final String TABLE_IDEOLOGIA = "CREATE TABLE ideologia(id INTEGER PRIMARY KEY AUTOINCREMENT, idea TEXT, idpartido TEXT);";
     private static final String TABLE_CANDIDATO = "CREATE TABLE candidato(id INTEGER PRIMARY KEY AUTOINCREMENT, imagen TEXT, nombre TEXT, cargo TEXT, idpartido TEXT);";
@@ -16,12 +16,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TABLE_VOTO = "CREATE TABLE Voto (" +
             "id_voto INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            "usuario_fk INTEGER, " +
+            //"usuario_fk INTEGER, " +
             "papeleta_fk INTEGER, " +
             "partido_fk INTEGER, " +
             "FOREIGN KEY(papeleta_fk) REFERENCES Papeleta(id_papeleta) ON DELETE CASCADE, " +
-            "FOREIGN KEY(partido_fk) REFERENCES partido(id_politico) ON DELETE CASCADE, " +
-            "FOREIGN KEY(usuario_fk) REFERENCES Usuario(id_usuario) ON DELETE CASCADE);";
+            "FOREIGN KEY(partido_fk) REFERENCES partido(id_politico) ON DELETE CASCADE);";
+            //"FOREIGN KEY(usuario_fk) REFERENCES Usuario(id_usuario) ON DELETE CASCADE);";
 
     private static final String DB_NAME = "votofacil.sqlite";
     private static final int DB_VERSION = 1;
@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String insertUsuarios = "INSERT INTO usuarios(cedula, nombres, apellidos, genero, edad, correo, contrasena) VALUES " +
                 "('0931760900', 'Mauro Fabrizio', 'Ramos Mesías', 'Masculino', '24', 'framosmesias@gmail.com', '12345'), " +
-                "('0931760901', 'Jesus', 'Acsota', 'Masculino', '25', 'j@gmail.com', '12345'), " +
+                "('0931760901', 'Jesus', 'Acosta', 'Masculino', '25', 'j@gmail.com', '12345'), " +
                 "('0931760902', 'Emely', 'Gonzalez', 'Femenino', '22', 'em@gmail.com', '12345')";
 
         db.execSQL(insertUsuarios);
@@ -51,7 +51,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "('Partido Avanza', 'avanza', '8 de Marzo de 2012', 'Derecha', 'Quito', 'Ecuador')," +
                 "('Partido Social Cristiano', 'psc', '13 de Noviembre de 1951', 'Centro', 'Quito', 'Ecuador' )," +
                 "('Movimiento de Unidad Plurinacional', 'pachakutik', '1 de Noviembre de 1995', 'Izquierda','Quito', 'Ecuador')," +
-                "('Partido Sociedad Patriótica', 'psp', '4 de Marzo de 2002', 'Centro', 'Quito', 'Ecuador')";
+                "('Partido Sociedad Patriótica', 'psp', '4 de Marzo de 2002', 'Centro', 'Quito', 'Ecuador'),"+
+                "('Partido Nulo', '', 'Nulo', 'Nulo', 'Nulo', 'Nulo')";  // es para los votos en nulo
         db.execSQL(insertPartido);
 
         String insertarIdeologia = "INSERT INTO ideologia(idea, idpartido) VALUES" +

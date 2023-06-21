@@ -3,11 +3,14 @@ package com.example.proyectomovil;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +30,7 @@ public class ActivityLogin extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         txtcedula = (EditText) findViewById(R.id.txtcedula);
         txtpassword=(EditText) findViewById(R.id.txtpassword);
+
     }
 
     public void btnIniciarSesionOnClick(View v){
@@ -70,6 +74,23 @@ public class ActivityLogin extends AppCompatActivity {
                     usuario.setEdad(c.getString(5));
                     usuario.setCorreo(c.getString(6));
                     usuario.setContrasena(c.getString(7));
+                    usuario.setVotacion(c.getInt(8));
+
+
+
+                    SharedPreferences preferencias = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
+
+                    SharedPreferences.Editor editor = preferencias.edit();
+                    editor.putInt("id", usuario.getId());
+                    editor.putString("cedula", usuario.getCedula());
+                    editor.putString("nombres", usuario.getNombres());
+                    editor.putString("apellidos", usuario.getApellidos());
+                    editor.putString("genero", usuario.getGenero());
+                    editor.putString("edad", usuario.getEdad());
+                    editor.putString("correo", usuario.getCorreo());
+                    editor.putString("contrasena", usuario.getContrasena());
+                    editor.putInt("votacion", usuario.getVotacion());
+                    editor.commit();
 
                     startActivity(call_Inicio);
                 } else {
