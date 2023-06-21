@@ -38,10 +38,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(TABLE_PAPELETA);
         db.execSQL(TABLE_VOTO);
 
-        String insertUsuarios = "INSERT INTO usuarios(cedula, nombres, apellidos, genero, edad, correo, contrasena) VALUES " +
-                "('0931760900', 'Mauro Fabrizio', 'Ramos Mesías', 'Masculino', '24', 'framosmesias@gmail.com', '12345'), " +
-                "('0931760901', 'Jesus', 'Acosta', 'Masculino', '25', 'j@gmail.com', '12345'), " +
-                "('0931760902', 'Emely', 'Gonzalez', 'Femenino', '22', 'em@gmail.com', '12345')";
+        String insertUsuarios = "INSERT INTO usuarios(cedula, nombres, apellidos, genero, edad, correo, contrasena,votacion) VALUES " +
+                "('0931760900', 'Mauro Fabrizio', 'Ramos Mesías', 'Masculino', '24', 'framosmesias@gmail.com', '12345',0), " +
+                "('0931760901', 'Jesus', 'Acosta', 'Masculino', '25', 'j@gmail.com', '12345',0), " +
+                "('0931760902', 'Emely', 'Gonzalez', 'Femenino', '22', 'em@gmail.com', '12345',0)";
 
         db.execSQL(insertUsuarios);
 

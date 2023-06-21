@@ -4,7 +4,8 @@
     <!-- Title Toolbar -->
     <string name="partidos_politicos">Partidos Políticos</string>
     <string name="votacionmain">Ejercer Voto</string>
-    <string name="fagg">FAQ</string>
+    <string name="perfilT">Perfil Usuario</string>
+    <string name="fagg">F.A.Q</string>
     <!-- Login text -->
     <string name="cedulainput">Ingrese su Número de cedula</string>
     <string name="passwordinput">Ingrese su Contraseña</string>

@@ -63,7 +63,7 @@ public class ActivityLogin extends AppCompatActivity {
             usuario = new Usuario();
 
             try {
-                c = db.rawQuery("SELECT id, cedula, nombres, apellidos, genero, edad, correo, contrasena FROM usuarios WHERE cedula = ? AND contrasena = ?", new String[]{valor, vclave});
+                c = db.rawQuery("SELECT id, cedula, nombres, apellidos, genero, edad, correo, contrasena, votacion FROM usuarios WHERE cedula = ? AND contrasena = ?", new String[]{valor, vclave});
 
                 if (c != null && c.moveToFirst()) {
                     usuario.setId(c.getInt(0));

@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -60,8 +62,8 @@ public class ActivityPapeletaMain extends AppCompatActivity {
 
     private void showConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirmación");
-        builder.setMessage("Usted realizo el proceso de Votación");
+        builder.setTitle("Seleccionar Voto Nulo");
+        builder.setMessage(" A continuación se enviara su Voto como NULO Y se terminara el proceso de Votar, desea continuar? ");
 
         builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
@@ -71,14 +73,26 @@ public class ActivityPapeletaMain extends AppCompatActivity {
         });
 
 
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
 
     private void openNewActivity() {
+        SharedPreferences pe = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
+        SharedPreferences.Editor e= pe.edit();
+        e.putInt("votacion",1);
+        e.commit();
         Intent intent = new Intent(this, ActivityPerfil.class);
-        intent.putExtra("votacion", "true");
+
+
         startActivity(intent);
     }
 
