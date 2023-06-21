@@ -17,7 +17,7 @@ public class ActivityInicio extends AppCompatActivity {
         CardView iPerfil = findViewById(R.id.iPerfil);
         CardView partidopolitico = findViewById(R.id.iPartidoPoliticos);
         CardView votocard = findViewById(R.id.iVotacion) ;
-
+        CardView resultcard = findViewById(R.id.iResultado) ;
         partidopolitico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +43,13 @@ public class ActivityInicio extends AppCompatActivity {
         });
 
 
-
+        resultcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent call_re = new Intent(ActivityInicio.this, ActivityResultados.class);
+                startActivity(call_re);
+            }
+        });
 
 
 

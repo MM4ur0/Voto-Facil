@@ -38,7 +38,7 @@ public class ActivityPerfil extends AppCompatActivity {
         cd =findViewById(R.id.CVotacion);
          cd.setVisibility(View.INVISIBLE);
         this.cargarPErfil();
-        Toolbar myToolbar= (Toolbar)findViewById(R.id.perfiltool);
+        Toolbar myToolbar= (Toolbar)findViewById(R.id.tooledit);
         setSupportActionBar(myToolbar);
 
     }
@@ -55,15 +55,17 @@ public class ActivityPerfil extends AppCompatActivity {
         int id = item.getItemId();
 
         // Aquí puedes utilizar el ID del elemento de menú para realizar acciones específicas
-        if (id == R.id.op1) {
-            // Acción para el primer elemento de menú
-           // setContentView(R.layout.);
+        if (id == R.id.edit) {
+            finish();
+            Intent call_log = new Intent(this, ActivityEditUser.class);
+            startActivity(call_log);
 
             return true;
-        } else if (id == R.id.op2) {
+        } else if (id == R.id.logout) {
             // Acción para el segundo elemento de menú
-            Intent call_partidos = new Intent(this, ActivityPartidosPoliticosListados.class);
-            startActivity(call_partidos);
+            finish();
+            Intent call_log = new Intent(this, ActivityLogin.class);
+            startActivity(call_log);
 
             return true;
         }

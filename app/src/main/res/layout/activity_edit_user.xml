@@ -14,7 +14,7 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Registro" />
+        app:title="Editar Perfil" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="69dp"
                     android:gravity="center"
-                    android:text="Registro de usuario"
+                    android:text="Editar Datos del Perfil"
                     android:textSize="26dp"
                     android:textStyle="bold" />
 
@@ -237,12 +237,16 @@
                         android:padding="5dp"
                         android:textSize="24dp" />
 
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp" />
+
                     <Button
                         android:layout_width="367dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/blue"
                         android:onClick="Registrar"
-                        android:text="Resgistrarse" />
+                        android:text="Actualizar Datos" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
