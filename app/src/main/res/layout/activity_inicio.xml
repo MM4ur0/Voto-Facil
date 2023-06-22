@@ -87,22 +87,18 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/txtnom"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Nombre"
                                     android:textSize="20dp" />
 
                                 <TextView
+                                    android:id="@+id/txtced"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Cedula"
                                     android:textSize="16dp" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Zona"
-                                    android:textSize="16dp" />
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
