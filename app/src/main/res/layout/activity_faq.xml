@@ -21,63 +21,59 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/votomain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
-            android:layout_width="381dp"
-            android:layout_height="582dp"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
-                android:text="Quiénes no pueden ejercer Voto? "
-                android:textStyle="bold|italic" />
+                android:textSize="24dp"
+                android:text="¿Quiénes no pueden ejercer Voto? "
+                android:textStyle="bold|italic"
+                android:layout_marginBottom="15dp"/>
 
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="360dp"
-                android:layout_height="1dp"
-                android:background="?android:attr/listDivider" />
-
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="512dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:textSize="14dp"
+                    android:text="@string/faq1" />
 
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/faq1" />
+                <TextView
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuáles son los cargos a escoger ?"
+                    android:textStyle="bold|italic"
+                    android:textSize="24dp"
+                    android:layout_marginBottom="15dp"/>
 
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:text="Cuáles son los cargos a escoger ?"
-                        android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/faq2" />
+            </LinearLayout>
 
-                    <View
-                        android:id="@+id/divider3"
-                        android:layout_width="360dp"
-                        android:layout_height="1dp"
-                        android:background="?android:attr/listDivider" />
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/faq2" />
-                </LinearLayout>
-            </ScrollView>
 
         </LinearLayout>
 
