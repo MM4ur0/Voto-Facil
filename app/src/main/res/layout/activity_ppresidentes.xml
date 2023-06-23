@@ -6,4 +6,358 @@
     android:layout_height="match_parent"
     tools:context=".ActivityPPresidentes">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/votacionmain"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="625dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="106dp">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="733dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="680dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/t1"
+                                android:layout_width="233dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="25dp"
+                                android:text="Nombre Partido" />
+
+                            <LinearLayout
+                                android:layout_width="382dp"
+                                android:layout_height="125dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="176dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView7"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/cintya" />
+
+                                    <TextView
+                                        android:id="@+id/textView25"
+                                        android:layout_width="119dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="199dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView8"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/nebot" />
+
+                                    <TextView
+                                        android:id="@+id/textView35"
+                                        android:layout_width="86dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="179dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/good"
+                                android:text="Votar" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="233dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="25dp"
+                                android:text="Nombre Partido" />
+
+                            <LinearLayout
+                                android:layout_width="382dp"
+                                android:layout_height="125dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="176dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView7"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/cintya" />
+
+                                    <TextView
+                                        android:id="@+id/textView25"
+                                        android:layout_width="119dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="199dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView8"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/nebot" />
+
+                                    <TextView
+                                        android:id="@+id/textView35"
+                                        android:layout_width="86dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="179dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/good"
+                                android:text="Votar" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="233dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="25dp"
+                                android:text="Nombre Partido" />
+
+                            <LinearLayout
+                                android:layout_width="382dp"
+                                android:layout_height="125dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="176dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView7"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/cintya" />
+
+                                    <TextView
+                                        android:id="@+id/textView25"
+                                        android:layout_width="119dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="199dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView8"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/nebot" />
+
+                                    <TextView
+                                        android:id="@+id/textView35"
+                                        android:layout_width="86dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="179dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/good"
+                                android:text="Votar" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="387dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="233dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="25dp"
+                                android:text="Nombre Partido" />
+
+                            <LinearLayout
+                                android:layout_width="382dp"
+                                android:layout_height="125dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="176dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView7"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/cintya" />
+
+                                    <TextView
+                                        android:id="@+id/textView25"
+                                        android:layout_width="119dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="199dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/imageView8"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/nebot" />
+
+                                    <TextView
+                                        android:id="@+id/textView35"
+                                        android:layout_width="86dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="179dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/good"
+                                android:text="Votar" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
