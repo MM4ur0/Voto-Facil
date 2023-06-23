@@ -9,6 +9,8 @@ public class Candidato {
     private int idpartido;
 
 
+
+
     public Candidato(int id, String img, String nombre, String cargo, int idpartido) {
         this.id = id;
         this.img = img;

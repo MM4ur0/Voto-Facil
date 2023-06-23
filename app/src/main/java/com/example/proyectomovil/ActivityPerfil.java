@@ -77,18 +77,7 @@ public class ActivityPerfil extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void cargarPErfil(){
-        SharedPreferences preferences = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
 
-        txtnombre.setText(preferences.getString("nombres",""));
-        txtapellido.setText(preferences.getString("apellidos",""));
-        genero.setText(preferences.getString("genero",""));
-        edad.setText(preferences.getString("edad",""));
-        correo.setText(preferences.getString("correo",""));
-
-
-
-    }
     public void cargarDatos() {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         final SQLiteDatabase db = dbHelper.getReadableDatabase();

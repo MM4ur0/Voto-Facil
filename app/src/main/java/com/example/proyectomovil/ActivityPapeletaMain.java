@@ -23,6 +23,8 @@ public class ActivityPapeletaMain extends AppCompatActivity {
 
     DatabaseHelper dh;
     CardView cardPresidente;
+
+    Voto voto=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +47,8 @@ public class ActivityPapeletaMain extends AppCompatActivity {
           dh= new DatabaseHelper(this);
 
         // Crear un objeto Voto y guardar en la base de datos
-        Voto voto = new Voto(1, 7);
-        guardarVoto(voto);
+         voto = new Voto(1, 7);
+        //guardarVoto(voto);
         this.showConfirmationDialog();
 
     }
@@ -68,6 +70,8 @@ public class ActivityPapeletaMain extends AppCompatActivity {
         builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+                guardarVoto(voto);
                 openNewActivity();
             }
         });
