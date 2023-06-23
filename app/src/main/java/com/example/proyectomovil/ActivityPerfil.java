@@ -7,12 +7,16 @@ import androidx.cardview.widget.CardView;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ActivityPerfil extends AppCompatActivity {
 
@@ -37,7 +41,7 @@ public class ActivityPerfil extends AppCompatActivity {
         correo =findViewById(R.id.txtCorreo);
         cd =findViewById(R.id.CVotacion);
          cd.setVisibility(View.INVISIBLE);
-        this.cargarPErfil();
+        this.cargarDatos();
         Toolbar myToolbar= (Toolbar)findViewById(R.id.tooledit);
         setSupportActionBar(myToolbar);
 
@@ -57,8 +61,8 @@ public class ActivityPerfil extends AppCompatActivity {
         // Aquí puedes utilizar el ID del elemento de menú para realizar acciones específicas
         if (id == R.id.edit) {
             finish();
-           // Intent call_log = new Intent(this, ActivityEditUser.class);
-            //startActivity(call_log);
+            Intent call_log = new Intent(this, ActivityEditPerfil.class);
+            startActivity(call_log);
 
             return true;
         } else if (id == R.id.logout) {
@@ -75,21 +79,60 @@ public class ActivityPerfil extends AppCompatActivity {
 
     public void cargarPErfil(){
         SharedPreferences preferences = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
-        tcedula.setText(preferences.getString("cedula",""));
+
         txtnombre.setText(preferences.getString("nombres",""));
         txtapellido.setText(preferences.getString("apellidos",""));
         genero.setText(preferences.getString("genero",""));
         edad.setText(preferences.getString("edad",""));
         correo.setText(preferences.getString("correo",""));
-        int v = preferences.getInt("votacion",8);
-        if(v==1){
-            cd.setVisibility(View.VISIBLE);
-        }else{
-            cd.setVisibility(View.INVISIBLE);
-        }
+
 
 
     }
+    public void cargarDatos() {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        final SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        if (db != null) {
+
+            SharedPreferences preferences = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
+            String valor = preferences.getString("cedula", "");
+
+            Cursor c = null;
+
+
+            try {
+                c = db.rawQuery("SELECT id, cedula, nombres, apellidos, genero, edad, correo, contrasena, votacion FROM usuarios WHERE cedula = ?", new String[]{valor});
+
+                if (c != null && c.moveToFirst()) {
+
+                    tcedula.setText(c.getString(1));
+                    txtnombre.setText(c.getString(2));
+                    txtapellido.setText(c.getString(3));
+                    genero.setText(c.getString(4));
+                    edad.setText(c.getString(5));
+                    correo.setText(c.getString(6));
+                    int v = c.getInt(8);
+                    if(v==1){
+                        cd.setVisibility(View.VISIBLE);
+                    }else{
+                        cd.setVisibility(View.INVISIBLE);
+                    }
+
+                }
+            } catch (SQLiteException e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Error al consultar la base de datos", Toast.LENGTH_SHORT).show();
+            } finally {
+                if (c != null) {
+                    c.close();
+                }
+            }
+        }
+    }
+
+
+
 
     public void ok(View view){
         finish();

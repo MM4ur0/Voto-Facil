@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoMovil"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".ActivityEditPerfil"
+            android:exported="false" />
         <activity
             android:name=".ActivityResultados"
             android:exported="false" />
