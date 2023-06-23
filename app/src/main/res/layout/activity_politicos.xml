@@ -65,10 +65,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="15dp">
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:backgroundTint="#EFEDED">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -85,14 +91,17 @@
                                 android:id="@+id/pPresidente"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Nombre del presidente"
                                 android:gravity="center"
-                                android:textSize="24sp" />
+                                android:text="Nombre del presidente"
+                                android:textColor="@color/blue"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Presidente"
                                 android:gravity="center"
+                                android:text="Presidente"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -100,7 +109,12 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="15dp">
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:backgroundTint="#EFEDED">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -117,14 +131,17 @@
                                 android:id="@+id/pVice"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Nombre del candidato"
                                 android:gravity="center"
-                                android:textSize="24dp" />
+                                android:text="Nombre del candidato"
+                                android:textColor="@color/blue"
+                                android:textSize="24dp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vicepresidente"
                                 android:gravity="center"
+                                android:text="Vicepresidente"
                                 android:textSize="14sp" />
                         </LinearLayout>
 

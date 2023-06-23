@@ -86,7 +86,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#EFEDED">
 
                     <LinearLayout
                         android:id="@+id/cCard"
@@ -112,6 +113,7 @@
                             android:id="@+id/cRealizado"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
                             android:text="Estan buenas las ideas expuestas en el plan!."
                             android:textSize="16dp" />
                     </LinearLayout>
@@ -122,7 +124,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#EFEDED">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -144,6 +147,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
                             android:text="Estan buenas las ideas expuestas en el plan!."
                             android:textSize="16dp" />
                     </LinearLayout>
@@ -154,7 +158,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#EFEDED">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -176,6 +181,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
                             android:text="Este plan político promete impulsar el crecimiento económico y generar empleo, pero requerirá una implementación cuidados."
                             android:textSize="16dp" />
                     </LinearLayout>
@@ -186,7 +192,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#EFEDED">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -208,6 +215,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
                             android:text="El enfoque de este político en la educación es alentador, sin embargo, es fundamental asegurar que se destinen los recursos adecuados."
                             android:textSize="16dp" />
                     </LinearLayout>
@@ -218,7 +226,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#EFEDED">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,6 +249,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
                             android:text="La promesa de este político de fortalecer la seguridad ciudadana es importante, pero será vital equilibrar las medidas de aplicación de la ley."
                             android:textSize="16dp" />
                     </LinearLayout>

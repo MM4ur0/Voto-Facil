@@ -15,7 +15,9 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Resultados" />
+        app:title="Resultados"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/Toolbar.TitleText"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,9 +47,8 @@
                     android:layout_height="47dp"
 
                     android:text="Información de los resultados"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="48dp"
@@ -67,15 +68,16 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.49"
                     app:layout_constraintStart_toStartOf="parent">
+
                     <TextView
                         android:id="@+id/textView18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="52dp"
+                        android:fontFamily="sans-serif-light"
                         android:text="Votos nulos : 150"
                         android:textSize="20sp"
-                        android:textStyle="bold|italic"
-                        />
+                        android:textStyle="italic" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -86,12 +88,15 @@
                             android:id="@+id/textView11"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/good"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/custom_input"
                             android:backgroundTint="#FB9F9F"
+                            android:padding="5dp"
                             android:text="Partido Avanza"
                             android:textSize="20sp"
-                            android:padding="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -104,6 +109,7 @@
                                 android:id="@+id/textView12"
                                 android:layout_width="229dp"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:text="Num. de Votos a Favor :"
                                 android:textSize="20sp" />
 
@@ -112,6 +118,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="right"
                                 android:text="45"
                                 android:textSize="20sp" />
@@ -136,12 +143,15 @@
                             android:id="@+id/textView13r1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#020101"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/custom_input"
                             android:backgroundTint="#FFEE55"
+                            android:padding="5dp"
                             android:text="Partido Social Cristiano"
                             android:textSize="20sp"
-                            android:padding="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -154,6 +164,7 @@
                                 android:id="@+id/textView14r2"
                                 android:layout_width="229dp"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:text="Num. de Votos a Favor :"
                                 android:textSize="20sp" />
 
@@ -162,6 +173,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="right"
                                 android:text="45"
                                 android:textSize="20sp" />
@@ -187,13 +199,15 @@
                             android:id="@+id/textView131"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#121212"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/custom_input"
                             android:backgroundTint="#F5C6FD"
+                            android:padding="5dp"
                             android:text="Sociedad Unida Más Acción"
                             android:textSize="20sp"
-                            android:padding="5dp"
-                            android:layout_marginBottom="5dp"
-                            />
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -206,6 +220,7 @@
                                 android:id="@+id/textView142"
                                 android:layout_width="229dp"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:text="Num. de Votos a Favor :"
                                 android:textSize="20sp" />
 
@@ -214,6 +229,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="right"
                                 android:text="20"
                                 android:textSize="20sp" />
@@ -238,11 +254,16 @@
                             android:id="@+id/textView1551"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#8CED90"
+                            android:layout_marginLeft="15dp"
+
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/custom_input"
+                            android:backgroundTint="#8CED90"
+                            android:padding="5dp"
                             android:text="Partido Sociedad Patriótica"
                             android:textSize="20sp"
-                            android:padding="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -256,6 +277,7 @@
                                 android:id="@+id/textView132"
                                 android:layout_width="229dp"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:text="Num. de Votos a Favor :"
                                 android:textSize="20sp" />
 
@@ -264,6 +286,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="right"
                                 android:text="11"
                                 android:textSize="20sp" />
