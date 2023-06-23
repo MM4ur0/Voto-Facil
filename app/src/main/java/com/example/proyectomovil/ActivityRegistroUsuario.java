@@ -4,8 +4,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -59,6 +61,20 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
                     cv.put("contrasena",txtPassword.getText().toString());
                     userced= txtCedula.getText().toString();
                     username=txtNombres.getText().toString() + txtApellidos.getText().toString();
+
+
+                    SharedPreferences preferencias = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
+
+                    SharedPreferences.Editor editor = preferencias.edit();
+
+                    editor.putString("userced", userced);
+                    editor.putString("username",username);
+                    editor.commit();
+
+
+
+
+
                     db.insert("usuarios",null,cv);
                     Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
                 }
@@ -86,6 +102,7 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
 
     }
 
+    public void No(View view){}
 
     public boolean SaveData(View view){
         
@@ -156,8 +173,9 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
     private void openNewActivity() {
         Intent intent = new Intent(this, ActivityInicio.class);
         startActivity(intent);
-        intent.putExtra("username", username);
-        intent.putExtra("userced", userced);
+
+
+
     }
 
 

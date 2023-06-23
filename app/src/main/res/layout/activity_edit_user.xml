@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityRegistroUsuario">
+   >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tooledit"
@@ -14,9 +14,9 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/white"
+        app:title="Editar Perfil"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:title="Editar Perfil" />
+        app:titleTextColor="@color/white" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -161,6 +161,7 @@
                         android:textSize="24dp" />
 
                     <EditText
+                        android:id="@+id/txtedad"
                         android:layout_width="363dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -246,15 +247,12 @@
                         android:layout_height="28dp" />
 
                     <Button
+                        android:id="@+id/TB"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="25dp"
-                        android:layout_marginBottom="15dp"
-                        android:backgroundTint="@color/blue"
                         android:onClick="Registrar"
-                        android:text="Actualizar Datos" />
+                        android:text="Button" />
+
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

@@ -90,6 +90,8 @@ public class ActivityLogin extends AppCompatActivity {
                     editor.putString("correo", usuario.getCorreo());
                     editor.putString("contrasena", usuario.getContrasena());
                     editor.putInt("votacion", usuario.getVotacion());
+                    editor.putString("userced", usuario.getCedula());
+                    editor.putString("username",usuario.getNombres());
                     editor.commit();
 
                     startActivity(call_Inicio);

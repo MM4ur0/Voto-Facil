@@ -57,8 +57,8 @@ public class ActivityPerfil extends AppCompatActivity {
         // Aquí puedes utilizar el ID del elemento de menú para realizar acciones específicas
         if (id == R.id.edit) {
             finish();
-            Intent call_log = new Intent(this, ActivityEditUser.class);
-            startActivity(call_log);
+           // Intent call_log = new Intent(this, ActivityEditUser.class);
+            //startActivity(call_log);
 
             return true;
         } else if (id == R.id.logout) {
