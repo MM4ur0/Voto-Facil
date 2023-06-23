@@ -82,16 +82,6 @@ public class ActivityLogin extends AppCompatActivity {
 
                     SharedPreferences.Editor editor = preferencias.edit();
                     editor.putInt("id", usuario.getId());
-                    editor.putString("cedula", usuario.getCedula());
-                    editor.putString("nombres", usuario.getNombres());
-                    editor.putString("apellidos", usuario.getApellidos());
-                    editor.putString("genero", usuario.getGenero());
-                    editor.putString("edad", usuario.getEdad());
-                    editor.putString("correo", usuario.getCorreo());
-                    editor.putString("contrasena", usuario.getContrasena());
-                    editor.putInt("votacion", usuario.getVotacion());
-                    editor.putString("userced", usuario.getCedula());
-                    editor.putString("username",usuario.getNombres());
                     editor.commit();
 
                     startActivity(call_Inicio);

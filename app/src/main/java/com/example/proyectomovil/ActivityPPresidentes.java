@@ -203,8 +203,38 @@ public class ActivityPPresidentes extends AppCompatActivity {
         values.put("papeleta_fk", voto.getPapeleta_fk());
         values.put("partido_fk", voto.getPartido_fk());
         db.insert("Voto", null, values);
+
+
+// Obtener el ID del usuario
+
+
+        SharedPreferences preferencias = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);;
+        SharedPreferences.Editor editor = preferencias.edit();
+
+        int idUsuario = preferencias.getInt("id", 0);
+        ;
+
+// Verificar si el ID del usuario existe en la tabla "usuarios"
+        String[] projection = {"id"};
+        String selection = "id = ?";
+        String[] selectionArgs = {String.valueOf(idUsuario)};
+        Cursor cursor = db.query("usuarios", projection, selection, selectionArgs, null, null, null);
+
+// Si el usuario existe, actualizar el campo "votacion" con el valor numérico deseado
+        if (cursor != null && cursor.moveToFirst()) {
+
+            values.clear();
+            values.put("votacion", idUsuario);
+            db.update("usuarios", values, "id = ?", selectionArgs);
+        }
+
+// Cerrar la base de datos
         db.close();
+
+        editor.putBoolean("Votar",true);
+
     }
+
 
     private void showConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

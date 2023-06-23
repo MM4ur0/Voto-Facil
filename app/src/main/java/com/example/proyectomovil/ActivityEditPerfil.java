@@ -112,13 +112,7 @@ public class ActivityEditPerfil extends AppCompatActivity {
                 username=txtNombres.getText().toString() + txtApellidos.getText().toString();
 
 
-                SharedPreferences preferencias = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
 
-                SharedPreferences.Editor editor = preferencias.edit();
-
-                editor.putString("userced", userced);
-                editor.putString("username",username);
-                editor.commit();
                 String whereClause = "id=" + iduser;
 
                 int filasActualizadas = db.update("Usuarios", cv, whereClause,null);
