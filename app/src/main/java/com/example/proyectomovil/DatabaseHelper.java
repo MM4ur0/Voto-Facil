@@ -1,8 +1,14 @@
 package com.example.proyectomovil;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.widget.ArrayAdapter;
+
+import com.example.proyectomovil.model.Candidato;
+
+import java.util.ArrayList;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -87,6 +93,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String insertAsambleistas = "INSERT INTO Papeleta (nombre_papeleta) VALUES ('Papeleta de Asambleistas')";
         db.execSQL(insertAsambleistas);
     }
+
+    /*public ArrayList<Candidato> mostrarCandidato(){
+        DatabaseHelper hd = new DatabaseHelper(context);
+        SQLiteDatabase db = hd.getWritableDatabase();
+
+        ArrayList<Candidato> list = new ArrayList<>();
+        Candidato cd= null;
+        Cursor c = null;
+
+        c = db.rawQuery("SELECT * FROM " + "candidato", null);
+
+        if(c.moveToFirst()){
+            do{
+                cd= new Candidato();
+                cd.setId(c.getInt(0));
+                cd.setImg(c.getString(1));
+                cd.setNombre(c.getString(2));
+                cd.setCargo(c.getString(3));
+                cd.setIdpartido(c.getInt(4));
+                list.add(cd);
+            }while (c.moveToNext());
+
+            c.close();
+        }
+
+        return list;
+
+    }
+*/
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
