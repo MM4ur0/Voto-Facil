@@ -1,8 +1,11 @@
 package com.example.proyectomovil;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +15,10 @@ import android.widget.Toast;
 
 public class ActivityRegistroUsuario extends AppCompatActivity {
 
-    EditText txtCedula, txtNombres, txtApellidos, txtCorreo, txtPassword, txtRPassword;
+    EditText txtCedula, txtNombres, txtApellidos, txtCorreo, txtPassword, txtRPassword,txtedad;
     RadioButton masculino , femenino;
 
-    String genero;
+    String genero,username,userced;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,87 +30,135 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
         txtApellidos = (EditText) findViewById(R.id.txtRAplleidos);
         masculino = (RadioButton) findViewById(R.id.rdbMasculino);
         femenino = (RadioButton) findViewById(R.id.rdbFemenino);
-        if(masculino.isChecked()){
+        /*if(masculino.isChecked()){
             genero = "Masculino";
         }else if(femenino.isChecked()){
             genero = "Femenino";
-        }
+        }*/
         txtCorreo = (EditText) findViewById(R.id.txtRCorreo);
         txtPassword = (EditText) findViewById(R.id.txtRPassword);
         txtRPassword = (EditText) findViewById(R.id.txtRRPassword);
-
+        txtedad = (EditText) findViewById(R.id.txtedad);
     }
 
 
     public void Registrar(View view){
-        SaveData(view);
-        Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
+
+        if(SaveData(view)){
+            DatabaseHelper dbhelper = new DatabaseHelper(view.getContext());
+            SQLiteDatabase db = dbhelper.getWritableDatabase();
+                if(db!=null){
+                    //usuarios(cedula, nombres, apellidos, genero, edad, correo, contrasena,votacion)
+                    ContentValues cv = new ContentValues();
+                    cv.put("cedula",txtCedula.getText().toString());
+                    cv.put("nombres",txtNombres.getText().toString());
+                    cv.put("apellidos",txtApellidos.getText().toString());
+                    cv.put("genero",genero);
+                    cv.put("edad",txtedad.getText().toString());
+                    cv.put("correo",txtCorreo.getText().toString());
+                    cv.put("contrasena",txtPassword.getText().toString());
+                    userced= txtCedula.getText().toString();
+                    username=txtNombres.getText().toString() + txtApellidos.getText().toString();
+                    db.insert("usuarios",null,cv);
+                    Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
+                }
+
+            showConfirmationDialog();
+        }
+
+
+
+        //Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
     }
 
 
-    public void SaveData(View view){
+
+    public void onRadioButtonClicked (View view){
+
+        if (masculino.isChecked()==true){
+
+            genero=masculino.getText().toString();
+        }
+        if (femenino.isChecked()==true){
+
+            genero=femenino.getText().toString();
+        }
+
+    }
+
+
+    public boolean SaveData(View view){
         
         if(txtCedula.getText().toString().equals("")){
             Toast.makeText(this, "No ha llenado la cédula", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(txtCedula.getText().toString().length() != 10){
             Toast.makeText(this, "La cédula debe tener 10 dígitos", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(txtNombres.getText().toString().equals("")){
             Toast.makeText(this, "No ha completado sus nombres", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(txtApellidos.getText().toString().equals("")){
             Toast.makeText(this, "No ha completado sus apellidos", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(masculino.isChecked() == false && femenino.isChecked() == false){
             Toast.makeText(this, "No seleccionado su género", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(txtCorreo.getText().toString().equals("")){
             Toast.makeText(this, "No ha ingresado su correo electrónico", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(txtPassword.getText().toString().equals("")){
             Toast.makeText(this, "No ha ingresado una contraseña", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(txtRPassword.getText().toString().equals("")){
             Toast.makeText(this, "No ha repetido su contraseña", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if(!txtPassword.getText().toString().equals(txtRPassword.getText().toString())){
             Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
-        /*DatabaseHelper dbhelper = new DatabaseHelper(view.getContext());
-        SQLiteDatabase db = dbhelper.getWritableDatabase();
-        if(db!=null){
-            ContentValues cv = new ContentValues();
-            cv.put("cedula",txtcedula.getText().toString());
-            cv.put("nombre",txtnombre.getText().toString());
-            cv.put("apellido",txtapellido.getText().toString());
-            cv.put("correo",txtcorreo.getText().toString());
-            cv.put("password",txtpassword.getText().toString());
-            db.insert("Usuario",null,cv);
-            Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
-        }*/
 
+        return true;
     }
 
+    private void showConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Usuario Registrado");
+        builder.setMessage("Registro Exitoso.");
 
+        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                openNewActivity();
+            }
+        });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+
+    private void openNewActivity() {
+        Intent intent = new Intent(this, ActivityInicio.class);
+        startActivity(intent);
+        intent.putExtra("username", username);
+        intent.putExtra("userced", userced);
+    }
 
 
 

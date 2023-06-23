@@ -6,9 +6,14 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class ActivityInicio extends AppCompatActivity {
 
+
+   TextView txtced,txtname;
+   String username,userced;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +23,13 @@ public class ActivityInicio extends AppCompatActivity {
         CardView partidopolitico = findViewById(R.id.iPartidoPoliticos);
         CardView votocard = findViewById(R.id.iVotacion) ;
         CardView resultcard = findViewById(R.id.iResultado) ;
+        txtced= (TextView) findViewById(R.id.txtced);
+        txtname= (TextView) findViewById(R.id.txtnom);
+         username =  getIntent().getStringExtra("username");
+         userced = getIntent().getStringExtra("userced");;
+        txtname.setText(username);
+        txtced.setText(userced);
+
         partidopolitico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
