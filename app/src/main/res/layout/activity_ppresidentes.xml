@@ -23,7 +23,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="404dp"
         android:layout_height="34dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,16 +42,15 @@
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="625dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="2dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -375,6 +374,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
+                            android:onClick="votar"
                             android:text="Votar" />
                     </LinearLayout>
 
@@ -455,6 +455,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
+                            android:onClick="votar"
                             android:text="Votar" />
                     </LinearLayout>
 
@@ -534,6 +535,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
+                            android:onClick="votar"
                             android:text="Votar" />
                     </LinearLayout>
 
