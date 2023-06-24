@@ -4,8 +4,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,8 +26,17 @@ public class ActivityVotocionMain extends AppCompatActivity {
 
         Toolbar myToolbar= (Toolbar)findViewById(R.id.votomain);
         setSupportActionBar(myToolbar);
+        SharedPreferences preferencias = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
+        boolean btb = preferencias.getBoolean("Votar", false);
 
         button = findViewById(R.id.initVoto);
+
+       /* if(btb){
+            button.setEnabled(false);
+        }else{
+            button.setEnabled(true);
+        }*/
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +54,16 @@ public class ActivityVotocionMain extends AppCompatActivity {
         builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                openNewActivity();
+                SharedPreferences preferencias = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
+                boolean process = preferencias.getBoolean("Votar",false);
+                if(process){
+                    showok();
+                }else{
+                    openNewActivity();
+                }
+
+
+
             }
         });
 
@@ -57,6 +77,30 @@ public class ActivityVotocionMain extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
+
+    private void showok() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("ADVERTENCIA");
+        builder.setMessage("Usted ya ha realizado  el Proceso de Votación ");
+
+        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                   finish();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+
+
+
+
+
+
+
 
     private void openNewActivity() {
         Intent intent = new Intent(this, ActivityPapeletaMain.class);

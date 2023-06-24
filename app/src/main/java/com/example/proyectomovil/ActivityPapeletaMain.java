@@ -39,6 +39,7 @@ public class ActivityPapeletaMain extends AppCompatActivity {
                 Intent call_pp = new Intent(ActivityPapeletaMain.this,ActivityPPresidentes.class);
                 //call_pp.putExtra("partido", "1");
                 startActivity(call_pp);
+                finish();
             }
         });
     }
@@ -88,6 +89,7 @@ public class ActivityPapeletaMain extends AppCompatActivity {
 // Cerrar la base de datos
         db.close();
         editor.putBoolean("Votar",true);
+        editor.commit();
     }
 
 
@@ -125,8 +127,8 @@ public class ActivityPapeletaMain extends AppCompatActivity {
         e.commit();
         Intent intent = new Intent(this, ActivityPerfil.class);
 
-
         startActivity(intent);
+        finish();
     }
 
 

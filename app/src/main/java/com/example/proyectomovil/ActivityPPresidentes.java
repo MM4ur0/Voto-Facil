@@ -232,6 +232,7 @@ public class ActivityPPresidentes extends AppCompatActivity {
         db.close();
 
         editor.putBoolean("Votar",true);
+        editor.commit();
 
     }
 
@@ -264,14 +265,11 @@ public class ActivityPPresidentes extends AppCompatActivity {
     }
 
     private void openNewActivity() {
-        SharedPreferences pe = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
-        SharedPreferences.Editor e= pe.edit();
-        e.putInt("votacion",1);
-        e.commit();
         Intent intent = new Intent(this, ActivityPerfil.class);
 
 
         startActivity(intent);
+        finish();
     }
 
 

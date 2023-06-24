@@ -110,6 +110,7 @@ public class ActivityLogin extends AppCompatActivity {
     public void btnRegistrar(View v){
         Intent call_registrar = new Intent(this, ActivityRegistroUsuario.class);
         startActivity(call_registrar);
+        finish();
     }
 
 

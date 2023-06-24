@@ -67,6 +67,11 @@ public class ActivityPerfil extends AppCompatActivity {
             return true;
         } else if (id == R.id.logout) {
             // Acción para el segundo elemento de menú
+            SharedPreferences preferencias = getSharedPreferences("usuarioobj",Context.MODE_PRIVATE);;
+            SharedPreferences.Editor editor = preferencias.edit();
+            editor.putBoolean("Votar",false);
+            editor.commit();
+
             finish();
             Intent call_log = new Intent(this, ActivityLogin.class);
             startActivity(call_log);
@@ -125,6 +130,7 @@ public class ActivityPerfil extends AppCompatActivity {
 
     public void ok(View view){
         finish();
+
     }
 
 
