@@ -35,7 +35,7 @@ public class ActivityLogin extends AppCompatActivity {
 
     public void btnIniciarSesionOnClick(View v){
         this.getUser();
-       /* if(usuario.getCedula().equals(txtcedula.getText().toString()) && usuario.getContrasena().equals(txtpassword.getText().toString())){
+       if(usuario.getCedula().equals(txtcedula.getText().toString()) && usuario.getContrasena().equals(txtpassword.getText().toString())){
             Intent call_registrar = new Intent(this, ActivityInicio.class);
             startActivity(call_registrar);
         }else{
@@ -44,7 +44,7 @@ public class ActivityLogin extends AppCompatActivity {
             Toast.makeText(this, "Cedula o Contraseña es incorrecta", Toast.LENGTH_SHORT).show();
         }
 
-**/
+
         Log.d("TAG", usuario.toString());
 
 
