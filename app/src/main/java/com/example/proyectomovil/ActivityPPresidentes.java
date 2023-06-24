@@ -113,8 +113,6 @@ public class ActivityPPresidentes extends AppCompatActivity {
 
      public void Upload() {
 
-         this.np1.setText(List.get(0).getNombre());
-         // List<Objeto> lista = getList(); // Supongamos que tienes una lista de objetos
 
 
          np1.setText(List.get(0).getNombre());
@@ -125,15 +123,12 @@ public class ActivityPPresidentes extends AppCompatActivity {
          nv3.setText(List.get(5).getNombre());
          np4.setText(List.get(6).getNombre());
          nv4.setText(List.get(7).getNombre());
-         /*imgp1.setText(List.get(0).getImg());
-         imgv1.setText(List.get(1).getImg());
-         imgp2.setText(List.get(2).getImg());
-         imgv2.setText(List.get(3).getImg());
-         imgp3.setText(List.get(4).getImg());
-         imgv3.setText(List.get(5).getImg());
-         imgp4.setText(List.get(6).getImg());
-         imgv4.setText(List.get(7).getImg());
-*/
+         np5.setText(List.get(8).getNombre());
+         nv5.setText(List.get(9).getNombre());
+         np6.setText(List.get(10).getNombre());
+         nv6.setText(List.get(11).getNombre());
+
+
 /*
          int drawableId1 = getResources().getIdentifier(List.get(0).getImg(), "drawable", getPackageName());
          Drawable drawable1 = getResources().getDrawable(drawableId1);
@@ -171,6 +166,23 @@ public class ActivityPPresidentes extends AppCompatActivity {
          int drawableId8 = getResources().getIdentifier(List.get(7).getImg(), "drawable", getPackageName());
          Drawable drawable8 = getResources().getDrawable(drawableId8);
          imgv4.setImageDrawable(drawable8);
+
+         int drawableId9 = getResources().getIdentifier(List.get(8).getImg(), "drawable", getPackageName());
+         Drawable drawable9 = getResources().getDrawable(drawableId9);
+         imgp5.setImageDrawable(drawable9);
+
+         int drawableId10= getResources().getIdentifier(List.get(9).getImg(), "drawable", getPackageName());
+         Drawable drawable10 = getResources().getDrawable(drawableId10);
+         imgv5.setImageDrawable(drawable10);
+
+         int drawableId11 = getResources().getIdentifier(List.get(10).getImg(), "drawable", getPackageName());
+         Drawable drawable11 = getResources().getDrawable(drawableId11);
+         imgp6.setImageDrawable(drawable11);
+
+         int drawableId12= getResources().getIdentifier(List.get(11).getImg(), "drawable", getPackageName());
+         Drawable drawable12 = getResources().getDrawable(drawableId12);
+         imgv6.setImageDrawable(drawable12);
+
 
 
          tnp1.setText("Movimiento Madera de Guerrero");

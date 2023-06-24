@@ -62,7 +62,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp">
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -75,7 +76,8 @@
                             android:layout_width="233dp"
                             android:layout_height="30dp"
                             android:layout_marginBottom="25dp"
-                            android:text="Nombre Partido" />
+                            android:text="Nombre Partido"
+                            android:textStyle="bold|italic" />
 
                         <LinearLayout
                             android:layout_width="382dp"
@@ -132,7 +134,8 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
                             android:onClick="votar"
-                            android:text="Votar" />
+                            android:text="Votar"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -156,7 +159,8 @@
                             android:layout_width="233dp"
                             android:layout_height="30dp"
                             android:layout_marginBottom="25dp"
-                            android:text="Nombre Partido" />
+                            android:text="Nombre Partido"
+                            android:textStyle="bold|italic" />
 
                         <LinearLayout
                             android:layout_width="382dp"
@@ -213,7 +217,8 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
                             android:onClick="votar"
-                            android:text="Votar" />
+                            android:text="Votar"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -237,7 +242,8 @@
                             android:layout_width="233dp"
                             android:layout_height="30dp"
                             android:layout_marginBottom="25dp"
-                            android:text="Nombre Partido" />
+                            android:text="Nombre Partido"
+                            android:textStyle="bold|italic" />
 
                         <LinearLayout
                             android:layout_width="382dp"
@@ -294,7 +300,8 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
                             android:onClick="votar"
-                            android:text="Votar" />
+                            android:text="Votar"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -318,7 +325,8 @@
                             android:layout_width="233dp"
                             android:layout_height="30dp"
                             android:layout_marginBottom="25dp"
-                            android:text="Nombre Partido" />
+                            android:text="Nombre Partido"
+                            android:textStyle="bold|italic" />
 
                         <LinearLayout
                             android:layout_width="382dp"
@@ -375,7 +383,8 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
                             android:onClick="votar"
-                            android:text="Votar" />
+                            android:text="Votar"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -399,7 +408,8 @@
                             android:layout_width="233dp"
                             android:layout_height="30dp"
                             android:layout_marginBottom="25dp"
-                            android:text="Nombre Partido" />
+                            android:text="Nombre Partido"
+                            android:textStyle="bold|italic" />
 
                         <LinearLayout
                             android:layout_width="382dp"
@@ -479,7 +489,8 @@
                             android:layout_width="233dp"
                             android:layout_height="30dp"
                             android:layout_marginBottom="25dp"
-                            android:text="Nombre Partido" />
+                            android:text="Nombre Partido"
+                            android:textStyle="bold|italic" />
 
                         <LinearLayout
                             android:layout_width="382dp"
@@ -536,7 +547,8 @@
                             android:layout_weight="1"
                             android:backgroundTint="@color/good"
                             android:onClick="votar"
-                            android:text="Votar" />
+                            android:text="Votar"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
