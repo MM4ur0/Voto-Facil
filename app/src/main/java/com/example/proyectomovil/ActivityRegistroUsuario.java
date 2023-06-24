@@ -59,6 +59,7 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
                     cv.put("edad",txtedad.getText().toString());
                     cv.put("correo",txtCorreo.getText().toString());
                     cv.put("contrasena",txtPassword.getText().toString());
+                    cv.put("votacion",0);
                     userced= txtCedula.getText().toString();
                     username=txtNombres.getText().toString() + txtApellidos.getText().toString();
 
@@ -70,21 +71,12 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
                     editor.putString("userced", userced);
                     editor.putString("username",username);
                     editor.commit();
-
-
-
-
-
                     db.insert("usuarios",null,cv);
                     Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
                 }
 
             showConfirmationDialog();
         }
-
-
-
-        //Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
     }
 
 

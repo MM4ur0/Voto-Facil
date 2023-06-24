@@ -88,7 +88,6 @@
                             android:outlineSpotShadowColor="@color/blue"
                             android:paddingStart="12dp"
                             android:shadowColor="@color/information"
-                            android:text="0931760900"
                             android:textColor="@color/black"
                             android:textSize="24sp" />
 
@@ -113,7 +112,6 @@
                             android:hint="AB12356OPK#"
                             android:inputType="textPassword"
                             android:paddingStart="12dp"
-                            android:text="12345"
                             android:textColor="@color/black"
                             android:textSize="24sp" />
 

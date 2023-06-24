@@ -58,8 +58,6 @@ public class ActivityEditPerfil extends AppCompatActivity {
             String valor = preferences.getString("userced", "");
 
             Cursor c = null;
-
-
             try {
                 c = db.rawQuery("SELECT id, cedula, nombres, apellidos, genero, edad, correo, contrasena, votacion FROM usuarios WHERE cedula = ?", new String[]{valor});
 
@@ -83,9 +81,6 @@ public class ActivityEditPerfil extends AppCompatActivity {
                     txtCorreo.setText(c.getString(6));
                     txtPassword.setText(c.getString(7));
                     txtRPassword.setText(c.getString(7));
-
-
-
                 }
             } catch (SQLiteException e) {
 
@@ -118,8 +113,6 @@ public class ActivityEditPerfil extends AppCompatActivity {
                 userced= txtCedula.getText().toString();
                 username=txtNombres.getText().toString() + txtApellidos.getText().toString();
 
-
-
                 String whereClause = "id=" + iduser;
 
                 int filasActualizadas = db.update("Usuarios", cv, whereClause,null);
@@ -143,7 +136,6 @@ public class ActivityEditPerfil extends AppCompatActivity {
 
             Toast.makeText(view.getContext(),"Guardado en Base de Datos",Toast.LENGTH_LONG);
         }
-
 
     }
 

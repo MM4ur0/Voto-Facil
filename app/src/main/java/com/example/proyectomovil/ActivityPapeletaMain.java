@@ -82,7 +82,7 @@ public class ActivityPapeletaMain extends AppCompatActivity {
         if (cursor != null && cursor.moveToFirst()) {
 
             values.clear();
-            values.put("votacion", idUsuario);
+            values.put("votacion", 1);
             db.update("usuarios", values, "id = ?", selectionArgs);
         }
 

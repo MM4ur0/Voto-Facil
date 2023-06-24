@@ -79,8 +79,6 @@ public class ActivityLogin extends AppCompatActivity {
                 editor.putString("userced", usuario.getCedula());
                 editor.putString("username", usuario.getNombres());
                 editor.commit();
-            } else {
-                Toast.makeText(this, "No se pudo acceder a la base de datos", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             Toast.makeText(this, "Error rawQuery", Toast.LENGTH_SHORT).show();

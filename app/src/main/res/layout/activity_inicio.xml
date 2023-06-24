@@ -107,7 +107,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="sans-serif-light"
-                                    android:text="Zona"
+                                    android:text="Guayaquil"
                                     android:textSize="16dp"
                                     android:textStyle="italic" />
 
