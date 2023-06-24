@@ -83,7 +83,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "('santi', 'Marlon Santi', 'Presidente', '5')," +
                 "('cecilia', 'Cecilia Velasque', 'Vice Presidente', '5')," +
                 "('lucio', 'Lucio Guttierez', 'Presidente', '6')," +
-                "('ibeth', 'Ibeth Suasnavas Gutierrez', 'Vice Precidente', '6')";
+                "('ibeth', 'Ibeth Gutierrez', 'Vice Precidente', '6')";
         db.execSQL(insertCandidato);
 
         String insertPapeleta = "INSERT INTO Papeleta (nombre_papeleta) VALUES ('Papeleta Presidencial')";

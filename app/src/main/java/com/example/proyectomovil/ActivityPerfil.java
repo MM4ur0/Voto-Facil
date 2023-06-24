@@ -90,7 +90,7 @@ public class ActivityPerfil extends AppCompatActivity {
         if (db != null) {
 
             SharedPreferences preferences = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
-            String valor = preferences.getString("cedula", "");
+            String valor = preferences.getString("userced", "");
 
             Cursor c = null;
 

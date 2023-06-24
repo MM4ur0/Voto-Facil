@@ -37,11 +37,7 @@ public class ActivityEditPerfil extends AppCompatActivity {
         txtApellidos = (EditText) findViewById(R.id.tapellidos);
         masculino = (RadioButton) findViewById(R.id.rbmasculino);
         femenino = (RadioButton) findViewById(R.id.rbfemenino);
-        /*if(masculino.isChecked()){
-            genero = "Masculino";
-        }else if(femenino.isChecked()){
-            genero = "Femenino";
-        }*/
+
         txtCorreo = (EditText) findViewById(R.id.tcorreo);
         txtPassword = (EditText) findViewById(R.id.tpassword);
         txtRPassword = (EditText) findViewById(R.id.tpassword2);
@@ -59,7 +55,7 @@ public class ActivityEditPerfil extends AppCompatActivity {
         if (db != null) {
 
             SharedPreferences preferences = getSharedPreferences("usuarioobj", Context.MODE_PRIVATE);
-            String valor = preferences.getString("cedula", "");
+            String valor = preferences.getString("userced", "");
 
             Cursor c = null;
 
@@ -74,10 +70,21 @@ public class ActivityEditPerfil extends AppCompatActivity {
                     txtNombres.setText(c.getString(2));
                     txtApellidos.setText(c.getString(3));
                     genero=c.getString(4);
+
+                    if (genero.equals("Masculino")){
+                        masculino.setChecked(true);
+                        femenino.setChecked(false);
+                    }
+                    else {
+                        femenino.setChecked(true);
+                        masculino.setChecked(false);
+                    }
                     txtedad.setText(c.getString(5));
                     txtCorreo.setText(c.getString(6));
                     txtPassword.setText(c.getString(7));
                     txtRPassword.setText(c.getString(7));
+
+
 
                 }
             } catch (SQLiteException e) {

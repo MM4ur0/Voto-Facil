@@ -76,6 +76,8 @@ public class ActivityLogin extends AppCompatActivity {
 
                 SharedPreferences.Editor editor = preferencias.edit();
                 editor.putInt("id", usuario.getId());
+                editor.putString("userced", usuario.getCedula());
+                editor.putString("username", usuario.getNombres());
                 editor.commit();
             } else {
                 Toast.makeText(this, "No se pudo acceder a la base de datos", Toast.LENGTH_SHORT).show();

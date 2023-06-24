@@ -149,7 +149,7 @@ app:title="Editar Perfil" />
                             android:id="@+id/rbfemenino"
                             android:layout_width="197dp"
                             android:layout_height="wrap_content"
-                            android:onClick="Actualizar"
+                            android:onClick="onRadioButtonClicked"
                             android:text="Femenino" />
                     </RadioGroup>
                 </LinearLayout>
