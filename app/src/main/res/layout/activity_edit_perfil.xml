@@ -22,8 +22,8 @@ app:titleTextAppearance="@style/Toolbar.TitleText"
 app:title="Editar Perfil" />
 
     <LinearLayout
-        android:layout_width="412dp"
-        android:layout_height="667dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,12 +46,13 @@ app:title="Editar Perfil" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="139dp"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="82dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         app:srcCompat="@drawable/edit_perfil_ic" />
 
                     <TextView

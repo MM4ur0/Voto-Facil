@@ -6,139 +6,147 @@
     android:layout_height="match_parent"
     tools:context=".ActivityLogin">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|center_horizontal|top"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="262dp"
-            android:layout_height="80dp"
-            android:layout_gravity="top|left"
-            app:srcCompat="@drawable/bandera" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/logoletras" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="Votar nunca fue más facil !"
-                android:textSize="16dp"
-                android:textStyle="italic" />
+            android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="15dp">
+                android:gravity="center|center_horizontal|top"
+                android:orientation="vertical">
 
-                <TextView
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="262dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="top|left"
+                    app:srcCompat="@drawable/bandera" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:text="@string/cedulainput"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/txtcedula"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="25dp"
-                    android:background="@drawable/custom_input"
-                    android:drawableStart="@drawable/ic_cedula"
-                    android:drawablePadding="15dp"
-                    android:ems="10"
-                    android:hint=" 0912345678"
-                    android:inputType="number"
-                    android:outlineSpotShadowColor="@color/blue"
-                    android:paddingStart="12dp"
-                    android:shadowColor="@color/information"
-                    android:text="0931760900"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:text="@string/passwordinput"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/txtpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/custom_input"
-                    android:drawableStart="@drawable/ic_password"
-                    android:drawablePadding="15dp"
-                    android:hint="AB12356OPK#"
-                    android:inputType="textPassword"
-                    android:paddingStart="12dp"
-                    android:text="12345"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/btnlogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="50dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/blue"
-                    android:onClick="btnIniciarSesionOnClick"
-                    android:text="Iniciar Sesión"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/btnsign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/black"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:gravity="center"
-                    android:onClick="btnRegistrar"
-                    android:text="¿Nuevo?, registrate aquí"
-                    android:textColor="@color/white"
-                    android:textStyle="italic" />
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/logoletras" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:text="Votar nunca fue más facil !"
+                        android:textSize="16dp"
+                        android:textStyle="italic" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:text="@string/cedulainput"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/txtcedula"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="25dp"
+                            android:background="@drawable/custom_input"
+                            android:drawableStart="@drawable/ic_cedula"
+                            android:drawablePadding="15dp"
+                            android:ems="10"
+                            android:hint=" 0912345678"
+                            android:inputType="number"
+                            android:outlineSpotShadowColor="@color/blue"
+                            android:paddingStart="12dp"
+                            android:shadowColor="@color/information"
+                            android:text="0931760900"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:text="@string/passwordinput"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/txtpassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/custom_input"
+                            android:drawableStart="@drawable/ic_password"
+                            android:drawablePadding="15dp"
+                            android:hint="AB12356OPK#"
+                            android:inputType="textPassword"
+                            android:paddingStart="12dp"
+                            android:text="12345"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/btnlogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="50dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/blue"
+                            android:onClick="btnIniciarSesionOnClick"
+                            android:text="Iniciar Sesión"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/btnsign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:onClick="btnRegistrar"
+                            android:text="¿Nuevo?, registrate aquí"
+                            android:textColor="@color/white"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
-
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
